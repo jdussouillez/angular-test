@@ -1,0 +1,9 @@
+{
+    "name": "test",
+    "short_name": "test",
+    "theme_color": "black",
+    "background_color": "white",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/"
+}

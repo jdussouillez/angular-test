@@ -1,10 +1,28 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from "@angular/core";
+import {RouterModule, Routes} from "@angular/router";
 
-const routes: Routes = [];
+function getRoutes(): Routes {
+    const routes: Routes = [
+        {
+            path: "",
+            redirectTo: "home",
+            pathMatch: "full"
+        }
+    ];
+    return routes;
+}
+
+const APP_ROUTES = getRoutes();
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [
+        RouterModule.forRoot(APP_ROUTES, {useHash: true})
+    ],
+    providers: [
+    ],
+    exports: [
+        RouterModule
+    ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
