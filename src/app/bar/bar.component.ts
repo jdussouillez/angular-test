@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
-import { Entity, EntityComponent } from "../entity/entity.component";
-
-export class Bar extends Entity {
-    bar?: string;
-}
+import { EntityComponent } from "../entity/entity.component";
+import { Bar } from "../model/model";
 
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
   styleUrls: []
 })
-export class BarComponent extends EntityComponent<Bar> {
+export class BarComponent extends EntityComponent<string, Bar> {
 
   constructor() {
     super();
